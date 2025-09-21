@@ -3,7 +3,6 @@ import cors from "cors";
 import { connectDB } from "./config/db.js";
 import foodRouter from "./routes/foodRoute.js";
 import userRouter from "./routes/userRoute.js";
-import 'dotenv/config.js';
 import cartRouter from "./routes/cartRoute.js";
 import orderRouter from "./routes/orderRoute.js";
 import userModel from "./models/userModel.js";
@@ -20,6 +19,10 @@ app.use(cors()); //allows frontend to interact with backend API safely
 connectDB();
 
 
+app.get("/",(req,res)=>{
+    res.send("API Working")
+})
+
 //api endpoint
 app.use("/api/food",foodRouter);
 
@@ -34,10 +37,6 @@ app.use("/api/cart", cartRouter);
 
 app.use("/api/order", orderRouter);
 
-
-app.get("/",(req,res)=>{
-    res.send("API Working")
-})
 
 app.listen(port, ()=>{
     console.log(`Server running on ${port}`);
