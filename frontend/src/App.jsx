@@ -17,7 +17,9 @@ const App = () => {
       <div className="app">
         
         <Navbar setShowLogin={setShowLogin}/>
+        {/* Routes is a container (or wrapper) for all your Route' s. */}
         <Routes>
+          {/* Route is used to define a single path in your application. */}
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/order" element={<PlaceOrder />} />

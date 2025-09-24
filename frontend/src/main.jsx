@@ -9,7 +9,10 @@ import StoreContextProvider from "./context/StoreContext";
 const root = createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    {/* setting up react router */
+    /* With BrowserRouter, your app behaves like a single-page application (SPA) 
+    updates only the required components without refreshing the page. */}
+    <BrowserRouter> 
       <StoreContextProvider>
         <App />
       </StoreContextProvider>

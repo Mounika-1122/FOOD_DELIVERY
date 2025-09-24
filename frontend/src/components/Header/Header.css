@@ -2,10 +2,13 @@
     height: 34vw;
     margin: 30px auto;
     background: url('/header_img.png') no-repeat;
+    /* used to fit bg-img inside the element */
     background-size: contain;
-    position: relative;
+    /* element stays in the normal flow using relative */
+    position: relative; 
 }
 .header-contents{
+    /* positioned relative to the .header */
     position: absolute;
     display: flex;
     flex-direction: column;

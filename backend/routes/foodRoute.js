@@ -13,7 +13,6 @@ const storage=multer.diskStorage({
     destination:"uploads", //This is the folder where uploaded files will be saved.
     filename:(req,file,cb)=>{ //This decides the file name to use when saving.
         return cb(null,`${Date.now()}${file.originalname}`)
-
     }
 })
 
